@@ -1,0 +1,51 @@
+/* IMPORT OTHER LIB */
+
+@charset "UTF-8";
+
+/* SELECT ALL ELEMENTS */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ROOT FOR DECLARE */
+
+:root {
+    --main-color: #010010;
+}
+
+
+/* FONT-FACE DECLARE */
+
+@font-face {
+    font-family: Brutial;
+    src: url();
+}
+
+
+/* BODY STYLE */
+
+body {
+    background: #0f0;
+}
+
+.container-body {
+    margin: 0 auto;
+    width: 95%;
+    min-height: 100vh;
+    background: var(--main-color);
+}
+
+.content {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    color: #ffff;
+}
