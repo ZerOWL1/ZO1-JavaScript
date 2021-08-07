@@ -235,3 +235,31 @@ var languages = [
  * - Expression Function - Function Được Gán Vào Biến
  * - Arrow Function
  */
+
+/** 14. Polyfill - Make Function Help By Owns
+ */
+// var methods = 'Java C# Python'.includes('Java', 0);
+// var methods2 = 'Java C# Python'.indexOf('C#', 0);
+// console.log(methods)
+// console.log(methods2)
+
+/** 15. Object
+ */
+var emailKey = 'email';
+
+var myInfo = {
+    name: 'Zerowl',
+    age: 21,
+    [emailKey]: 'haild.works@gmail.com',
+    //method getName
+    getName: function() {
+        return this.name;
+    }
+};
+
+var ageKey = 'age';
+
+//delete 1 element of obj
+// delete myInfo[ageKey];
+
+console.log(myInfo.getName());
