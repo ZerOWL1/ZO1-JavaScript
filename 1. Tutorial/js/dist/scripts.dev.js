@@ -1,41 +1,39 @@
+"use strict";
+
+var _myInfo;
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 //SCRIPTS DECLARE HERE
 var i = 0;
 var txt = 'WELCOME TO ZEROWL1 TEMPLATE';
 var speed = 50;
 
 window.onload = function typing(e) {
-    if (i < txt.length) {
-        document.getElementById("type").innerHTML += txt.charAt(i);
-        i++;
-        setTimeout(typing, speed);
-    }
-}
+  if (i < txt.length) {
+    document.getElementById("type").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typing, speed);
+  }
+}; // 1. First JavaScript - JQuery
 
 
-// 1. First JavaScript - JQuery
-$(".btn-click").click(function() {
-    // alert("Button Click");
-});
+$(".btn-click").click(function () {// alert("Button Click");
+}); // 2. Variables
 
-
-// 2. Variables
 var a = 10;
 var b = 15;
 var total = a + b;
-let fullName = 'Hello World';
-const PI = 3.14;
-
-$(".btn-click").click(function() {
-    //console.log(fullName);
-    var text = total + '\n' + fullName + '\n' + (fullName = PI);
-    var test = text.replace(/\n/g, "<br/>");
-    $('.text-type').html(test);
-})
-
-//3. Comments
+var fullName = 'Hello World';
+var PI = 3.14;
+$(".btn-click").click(function () {
+  //console.log(fullName);
+  var text = total + '\n' + fullName + '\n' + (fullName = PI);
+  var test = text.replace(/\n/g, "<br/>");
+  $('.text-type').html(test);
+}); //3. Comments
 // Block comment - Key: /**
 // Comment Normal - Key: Ctrl + K + U
-
 
 /** 4. Built-IN Function
  * - Alert
@@ -46,31 +44,28 @@ $(".btn-click").click(function() {
  * - Set Interval
  */
 
-$(".btn-click").click(function() {
-    var mess = "Enter Your Name!!";
-    // var name = prompt(mess);
-    var name = null;
-    console.log("Your Name: " + name);
-})
+$(".btn-click").click(function () {
+  var mess = "Enter Your Name!!"; // var name = prompt(mess);
 
-//setTimeOut(function(), timeOut) - Đối tượng truyền vào là 1 Function
-$(".btn-click").click(function() {
-    setTimeout(function() {
-        var text = '';
-        $('.text-type').text(text);
-    }, 5000)
-})
+  var name = null;
+  console.log("Your Name: " + name);
+}); //setTimeOut(function(), timeOut) - Đối tượng truyền vào là 1 Function
 
-//setInterval(function(), timeDo) - Hàm thực hiện liên tục trong 1 khoảng thời gian
-$(".btn-click").click(function() {
-    setInterval(function() {
-        var text = 'Hello World';
-        for (let index = 0; index < text.length; index++) {
-            //console.log(text.charAt(index));
-        }
-    }, 5000)
-})
+$(".btn-click").click(function () {
+  setTimeout(function () {
+    var text = '';
+    $('.text-type').text(text);
+  }, 5000);
+}); //setInterval(function(), timeDo) - Hàm thực hiện liên tục trong 1 khoảng thời gian
 
+$(".btn-click").click(function () {
+  setInterval(function () {
+    var text = 'Hello World';
+
+    for (var index = 0; index < text.length; index++) {//console.log(text.charAt(index));
+    }
+  }, 5000);
+});
 /** 5. Toán Tử
  * Self-Educated
  * Prefix, Postfix
@@ -98,7 +93,6 @@ $(".btn-click").click(function() {
 //     console.log('False DK')
 // }
 
-
 /** 8. Chuỗi
  * - Tạo chuỗi:
  *  + Cách tạo chuỗi
@@ -109,14 +103,11 @@ $(".btn-click").click(function() {
  * - Chú ý đến độ dài chuỗi khi viết
  * - Templates String ES6
  */
-
 //Cách 1:
-var hello = 'Hello World |\'From Dead\'| Test';
 
-//Cách 2:
-var hello2 = new String('Test 1');
+var hello = 'Hello World |\'From Dead\'| Test'; //Cách 2:
 
-//DataType
+var hello2 = new String('Test 1'); //DataType
 //console.log(typeof hello2);
 // console.log(hello);
 // console.log(hello.substring(0, hello.indexOf('|')));
@@ -125,7 +116,6 @@ var hello2 = new String('Test 1');
 // console.log(hello.split('|'));
 // console.log(`This is: ` +
 //     `${hello.substring(0, hello.indexOf('|'))}`)
-
 // //Test
 // var a = 1;
 // var b = 2;
@@ -143,12 +133,9 @@ var hello2 = new String('Test 1');
  * - Get a character by index
  * - ....
  */
-
 // var myString = "   Dota2 Community! Com";
-
 // // /g is using regex
 // console.log(myString.trim().length);
-
 
 /** 10. Number 
  * - To String
@@ -161,37 +148,24 @@ var hello2 = new String('Test 1');
  */
 //Work with Array
 //1. To String
-var languages = [
-    'Java',
-    'C#',
-    'Ruby'
-];
 
-//2. Join
+var languages = ['Java', 'C#', 'Ruby']; //2. Join
 // console.log(languages.join(' - '))
-
 //3. Pop - Last IN First OUT (Stack)
 // console.log(languages.pop())
-
 //4. Push - Add Last and Return Array.length
 // console.log(languages.push('Dart', 'Dota2'))
-
 //5. Shift - Delete Last and Return Value
 // console.log(languages.shift(languages))
-
 //6. Unshift - Add First and Return Array.length
 // console.log(languages.unshift('Dota2', 'Pikachu'))
-
 //7. Splicing - Delete input index and element delete number of index
 // Return index value
 // console.log(languages.splice(1, 2))
 // console.log(languages.splice(1, 0, 'Dota2')) //add index
-
 //8. Concat - Merge Array
 //9. Slicing - Cut Element of Array
 // console.log(languages)
-
-
 
 /** 12. Function
  * Built-in
@@ -204,20 +178,16 @@ var languages = [
 //     console.log(`This is: ${a+b}`)
 // }
 // sum(a, b);
-
 // function divNum(a, b) {
 //     console.log(`This is: ${a-b}`)
 // }
-
 // function mulNumber(a, b) {
 //     return (a * b).toString();
 // }
-
 // divNum(a, b)
 // console.log(a)
 // console.log(b)
 // console.log(mulNumber(a.toFixed(), b.toFixed()))
-
 //function arguments
 // function writeLog() {
 //     var myString = '';
@@ -228,7 +198,6 @@ var languages = [
 // }
 // writeLog('Pokemon', 'Pikachu')
 //     // console.log(writeLog('Pokemon', 'Pikachu'))
-
 
 /** 13. Các loại Function
  * - Declaration Function - Function Bình Thường
@@ -245,32 +214,25 @@ var languages = [
 
 /** 15. Object
  */
+
 var emailKey = 'email';
-
-var myInfo = {
-    name: 'Zerowl',
-    age: 21,
-    [emailKey]: 'haild.works@gmail.com',
-    //method getName
-    getName: function() {
-        return this.name;
-    }
-};
-
-var ageKey = 'age';
-
-//delete 1 element of obj
+var myInfo = (_myInfo = {
+  name: 'Zerowl',
+  age: 21
+}, _defineProperty(_myInfo, emailKey, 'haild.works@gmail.com'), _defineProperty(_myInfo, "getName", function getName() {
+  return this.name;
+}), _myInfo);
+var ageKey = 'age'; //delete 1 element of obj
 // delete myInfo[ageKey];
-
 // console.log(myInfo.getName());
 
 /** 16. Object Constructor
  * 
  */
+
 /** 17. Object Prototype
  * - Nguyên mẫu của đối tượng
  */
-
 // function User(firstName, lastName, avatar) {
 //     this.firstName = firstName;
 //     this.lastName = lastName;
@@ -279,18 +241,14 @@ var ageKey = 'age';
 //         return `${this.firstName} ${this.lastName}`
 //     }
 // }
-
-
 // var author = new User('Author', 'Pikachu', 'Avatar');
 // var user = new User('User', 'Pokemon', 'Avatar');
-
 // //setter new properties to constructor author
 // author.title = 'authorTitle';
 // //setter new properties to constructor user
 // user.comment = 'userComment';
 // //add prototype
 // User.prototype.className = 'SE1435'
-
 // console.log(author.getName())
 // console.log(user.className)
 // console.log(user)
@@ -304,19 +262,23 @@ var ageKey = 'age';
  * 
  */
 // var date = new Date().getDay() + 1;
+
 var date = 4;
 
 switch (date) {
-    case 2:
-        console.log('Monday');
-        break;
-    case 3:
-        console.log('Thu 3');
-        break;
-    case 7:
-        console.log('Thu 7');
-        break;
-    default:
-        console.log('Date not found');
-        break;
+  case 2:
+    console.log('Monday');
+    break;
+
+  case 3:
+    console.log('Thu 3');
+    break;
+
+  case 7:
+    console.log('Thu 7');
+    break;
+
+  default:
+    console.log('Date not found');
+    break;
 }
