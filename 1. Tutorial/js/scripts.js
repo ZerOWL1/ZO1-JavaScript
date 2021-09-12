@@ -304,19 +304,96 @@ var ageKey = 'age';
  * 
  */
 // var date = new Date().getDay() + 1;
-var date = 4;
+// var date = 4;
 
-switch (date) {
-    case 2:
-        console.log('Monday');
-        break;
-    case 3:
-        console.log('Thu 3');
-        break;
-    case 7:
-        console.log('Thu 7');
-        break;
-    default:
-        console.log('Date not found');
-        break;
+// switch (date) {
+//     case 2:
+//         console.log('Monday');
+//         break;
+//     case 3:
+//         console.log('Thu 3');
+//         break;
+//     case 7:
+//         console.log('Thu 7');
+//         break;
+//     default:
+//         console.log('Date not found');
+//         break;
+// }
+
+
+/** 20. Tenary Operator
+ * Toán tử 3 ngôi
+ */
+// var course = {
+//     name: "Java",
+//     coin: 10
+// }
+
+// var rs = course.coin > 0 ? `${course.coin}$` : "Free";
+// console.log(`This ${course.name} costs ${rs}`);
+
+
+/** 21. Loop
+ * 1. for - lặp với điều kiện đúng
+ * 2. for/in - lặp qua key của đối tượng
+ * 3. for/of - lặp qua value của đối tượng
+ * 4. while - lặp khi điều kiện dúng
+ * 5. do/while - lặp ít nhất 1 lần, sau đó ktra điều kiện
+ */
+// var arr = ["Java", "C#", "C++"]
+
+//normal for
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
 }
+
+// async function runArray(arr) {
+//     for (let i = 0; i < 101; i += 10) {
+//         await sleep(1000);
+//         console.log(`Test ${i}%`);
+//     }
+// }
+// runArray(arr);
+
+//for/in - get key of object
+// var myInfo = {
+//     name: "HaiLD8",
+//     age: "21",
+//     address: "Hanoi"
+// }
+// var myString = 'Java';
+
+// for (var key in myInfo) {
+//     console.log(myInfo[key])
+// }
+
+// for (var key in myString) {
+//     console.log(myString[key])
+// }
+
+//for/of - get value of object
+// var arr = ["Java", "C#", "C++", "Python"]
+// var testObject = {
+//     name: 'Test',
+//     age: 18
+// }
+
+// for (var value of Object.keys(testObject)) {
+//     console.log(testObject[value]);
+// }
+
+//while loop
+var arr = ["Java", "C#", "C++", ".NET"];
+// var index = 0;
+// while (index <= arr.length - 1) {
+//     console.log(arr[index]);
+//     index++;
+// }
+
+//do-while loop
+var i = 0;
+do {
+    console.log(i)
+    i++;
+} while (i <= 10);
