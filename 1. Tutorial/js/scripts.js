@@ -392,8 +392,106 @@ var arr = ["Java", "C#", "C++", ".NET"];
 // }
 
 //do-while loop
-var i = 0;
-do {
-    console.log(i)
-    i++;
-} while (i <= 10);
+// var i = 0;
+// do {
+//     console.log(i)
+//     i++;
+// } while (i <= 10);
+
+//nested loop
+// var myArray = [
+//     [1, 2],
+//     [3, 4],
+//     [5, 6]
+// ]
+
+// for (let i = 0; i < myArray.length; i++) {
+//     for (let j = 0; j < myArray[i].length; j++) {
+//         console.log(myArray[i][j]);
+//     }
+// }
+
+
+//------------------------------
+// Array Part 2
+/** Method: 
+ * forEach()
+ * every()
+ * some()
+ * find()
+ * filter()
+ * map()
+ * reduce()
+ */
+
+
+var courses = [{
+        id: 1,
+        name: 'java',
+        coins: 500
+    },
+    {
+        id: 2,
+        name: 'c#',
+        coins: 600
+    },
+    {
+        id: 3,
+        name: 'c++',
+        coins: 0
+    },
+    {
+        id: 4,
+        name: 'java',
+        coins: 200
+    }
+];
+
+//for each arr
+// courses.forEach(function(myCourse, index) {
+//     console.log(myCourse, `this is ${this.id}`);
+// });
+
+//every - ktra các phần tử của mảng cùng thoả mãn 1 đkiện nào đó
+// var isFree = courses.every(function(course) {
+//     return course.coins === 0;
+// });
+
+// console.log(isFree);
+
+//some - ktra các phần tử của mảng phải thoả mãn 1 đkiện nào đó
+// var isFree = courses.some(function(course) {
+//     return course.coins === 0;
+// });
+
+// console.log(isFree);
+
+//find
+// var courseName = courses.find(function(f) {
+//     return f.name === 'c';
+// });
+
+// console.log(courseName);
+
+//filter
+// var courseName = courses.filter(function(f) {
+//     return f.name === 'java';
+// });
+
+// console.log(courseName);
+
+//map - thay đổi phần tử của Array - return new Arr
+function courseHandler(c, index, originArr) {
+    return {
+        id: c.id,
+        cName: `Course : ${c.name}`,
+        coins: c.coins,
+        coinText: `Payment: ${c.coins}`,
+        index: index,
+        originArr: originArr,
+    };
+}
+
+var replaceArr = courses.map(courseHandler)
+
+console.log(replaceArr)
