@@ -494,4 +494,11 @@ function courseHandler(c, index, originArr) {
 
 var replaceArr = courses.map(courseHandler)
 
-console.log(replaceArr)
+//reduce - get only 1 total output
+var totalCoint = 0;
+for (let i = 0; i < courses.length; i++) {
+    console.log(`this is ${courses[i].coins} at index ${i}`)
+    totalCoint += courses[i].coins;
+}
+
+console.log(totalCoint);
